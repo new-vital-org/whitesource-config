@@ -1,44 +1,23 @@
 {
   "scanSettings": {
-    "configMode": "AUTO",
+    "configddMode": "AUTO",
     "configExternalURL": "",
-    "baseBranches": []
-  },
-  "scanSettingsSAST": {
-    "enableScan": true,
-    "scanPullRequests": true,
-    "incrementalScan": true,
     "baseBranches": [],
-    "snippetSize": 10
+    "enableLicenseViolations":true,
+    "enableIaC": true
+  },
+  "scanSettingsSAST" : {
+    "enableScan": true
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
+    "licenseCheckRunConclusionLevel": "failure",
     "displayMode": "diff",
-    "useMendCheckNames": true
-  },
-  "checkRunSettingsSAST": {
-    "checkRunConclusionLevel": "failure",
-    "severityThreshold": "high"
+    "useMendCheckNames": "true",
+    "strictMode": "failure"
   },
   "issueSettings": {
     "minSeverityLevel": "LOW",
-    "issueType": "DEPENDENCY"
-  },
-  "issueSettingsSAST": {
-    "minSeverityLevel": "high",
-    "issueType": "repo"
-  },
-  "remediateSettings": {
-    "workflowRules": {
-      "enabled": true
-    }
-  },
-  "imageSettings": {
-    "imageTracing": {
-      "enableImageTracingPR": false,
-      "addRepositoryCoordinate": false,
-      "addDockerfilePath": false,
-      "addMendIdentifier": false
-    }
+    "issueType":"DEPENDENCY"
   }
 }
